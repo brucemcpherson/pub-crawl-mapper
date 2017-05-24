@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>effex-demo-markers</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- load MUI -->
+  <link href="https://cdn.muicss.com/mui-0.9.9/css/mui.min.css" rel="stylesheet" type="text/css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" href="img/exn64.ico" type="image/x-icon">
+  <script src="https://cdn.muicss.com/mui-0.9.9/js/mui.min.js"></script>
+  <script src="https://storage.googleapis.com/xliberation.com/effex-api/effex-api-client-v1.3.min.js"></script>
+  <style>
+    #map {
+      height: 100%;
+      margin-left: 210px;
+    }
+    
+    #panel {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+      background-color: #fff;
+      width: 180px;
+    }
+    
+    #errify {
+      height: 110px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 180px;
+      padding: 15px;
+    }
+    
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .iconlink {
+      cursor: pointer;
+    }
+    
+    #camera {
+      position: absolute;
+      display: block;
+      background-color: white;
+      width: 24px;
+      height: 56px;
+      top: 40px;
+      right: 20px;
+      z-index: 6;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <div id="panel" class="mui-panel" style="padding-top:0;padding-bottom:0;margin:0;">
+    
+    <div class="mui--hide">
+      <h4>Effex store data</h4>
+      <div class="mui-divider"></div>
+      <div>Demo name</div>
+      <div id="efx-name" style="font-size:.7em;"></div>
+      <div>Updater key</div>
+      <div id="efx-key" style="font-size:.7em;"></div>
+      <div>Item key</div>
+      <div id="efx-id" style="font-size:.7em;"></div>
+      <div class="mui-divider"></div>
+    </div>
+
+    <div class="mui--text-title">Effex pub crawls</div>
+    <div class="mui--text-dark-secondary">
+      <legend id="data-name">Pub crawls</legend>
+      <div class="mui-select">
+        <select id="pub-crawl-selector">
+        </select>
+      </div>
+      <ul id="pub-crawl-waypoints" class="mui-list--unstyled"></ul>
+      </div>
+    </div>
+
+    <div id="errify" class="mui--bg-danger mui--hide mui--text-white mui--text-caption"></div>
+  </div>
+  <script src="https://www.google.com/jsapi"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20150312/classList.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.0.5/es6-promise.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.min.js"></script>
+
+  <script src="src/mapsApiKey.js"></script>
+  <script src="src/maps.js"></script>
+  <script src="src/main.js"></script>
+
+</body>
+
+</html>
